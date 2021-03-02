@@ -58,7 +58,7 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="hero-btn" type="button" data-modal-open>
+        <button class="hero-btn btn" type="button" data-modal-open>
           Заказать услугу
         </button>
       </section>
@@ -596,6 +596,57 @@
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
+
+        <!-- Form for modal -->
+
+        <form action="" class="form">
+          <h3 class="form-title">Оставьте свои данные, мы вам перезвоним</h3>
+          <label for="name" class="form-label"
+            >Имя
+            <svg class="form-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-human"></use>
+            </svg>
+          </label>
+          <input type="text" class="form-input" id="name" placeholder=" " />
+
+          <label for="tel" class="form-label"
+            >Телефон
+            <svg class="form-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </label>
+          <input type="tel" class="form-input" id="tel" placeholder=" " />
+
+          <label for="fmail" class="form-label"
+            >Почта
+            <svg class="form-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-fmail"></use>
+            </svg>
+          </label>
+          <input type="email" class="form-input" id="fmail" placeholder=" " />
+
+          <label for="comment" class="form-label">Комментарий</label>
+          <textarea
+            class="form-area"
+            name="comment"
+            id="comment"
+            rows="5"
+            placeholder="Введите текст"
+          ></textarea>
+          <div class="policy">
+            <input
+              type="checkbox"
+              name="agreements"
+              id="policy"
+              class="policy-input"
+            />
+            <label for="policy" class="policy-label"
+              >Соглашаюсь с рассылкой и принимаю
+              <a class="policy-link" href="#">Условия договора</a>
+            </label>
+          </div>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
