@@ -405,15 +405,14 @@ a {
 }
 
 .policy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
-  padding: 0 12px;
+  padding-left: 12px;
+  padding-right: 7px;
 }
 
 .policy-link {
   color: var(--acent-color);
+  margin-left: 5px;
 }
 
 .policy-label {
