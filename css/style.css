@@ -304,6 +304,7 @@ a {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
   max-height: 581px;
   max-width: 528px;
   position: absolute;
@@ -347,7 +348,7 @@ a {
 .form {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  width: 100%;
 }
 
 .form-label {
@@ -357,7 +358,6 @@ a {
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
-  margin-top: 10px;
   margin-bottom: 4px;
 }
 
@@ -367,6 +367,20 @@ a {
   width: 100%;
   height: 40px;
   padding-left: 40px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: border 250ms var(--timing-fn);
+}
+
+.form-input:focus,
+.form-area:focus {
+  border: 1px solid var(--acent-color);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--acent-color);
 }
 
 .form .btn {
@@ -378,12 +392,14 @@ a {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
-  margin-bottom: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: border 250ms var(--timing-fn);
 }
 
 .form-area::placeholder {
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.1;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -392,10 +408,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  padding: 0 12px;
 }
 
 .policy-link {
-  text-decoration: underline;
   color: var(--acent-color);
 }
 
@@ -405,24 +422,40 @@ a {
   color: var(--secondary-text-color);
 }
 
-.policy-input {
-  margin-right: 8px;
-}
-
 .form-icon {
   position: absolute;
-  left: 0;
-  bottom: -30px;
-  transform: translateX(15px);
+  top: 0;
+  left: 12px;
+  transform: translateY(30px);
+  width: 18px;
+  height: 18px;
+  fill: var(--primary-text-color);
+  transition: fill 250ms var(--timing-fn);
 }
 
-.form-label + .form-input:focus {
-  outline-color: var(--acent-color);
+.policy-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.form-icon ~ .form-input:focus {
-  fill: var(--acent-color);
-  color: #2196f3;
+.policy-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+.policy-input:checked + .policy-label::before {
+  border-color: var(--acent-color);
+  background-color: var(--acent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 /* * DESCRIPTION */
